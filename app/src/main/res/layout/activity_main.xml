@@ -1,105 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
 
     <TextView
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
         android:text="REGISTER"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_margin="20dp"
-        app:layout_constraintBottom_toBottom = "parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/button_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_margin="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="24dp"
-        android:text="Username                  LFP"
-        android:backgroundTint="@color/green_light"
-        android:layout_marginBottom="70dp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register" />
+        android:paddingStart="12dp"
+        android:background="@drawable/edit_text_style"
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Username"
 
-    <Button
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_marginTop="12dp"
+        android:paddingStart="12dp"
+        android:background="@drawable/edit_text_style"
         android:id="@+id/button_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="4dp"
-        android:text="Email"
-        android:textAllCaps="false"
-        android:backgroundTint="@color/green_light"
-        android:layout_marginBottom="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Email"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/button_username"
-        app:layout_constraintTop_toBottomOf="@id/button_username" />
-<Button
-    android:id="@+id/button_next"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="NEXT"
-    android:textColor="@color/green_light"
-    app:layout_constraintBottom_toTopOf="@id/image"
-    app:layout_constraintStart_toStartOf="@id/image"
-    app:layout_constraintEnd_toEndOf="@id/image"
-    android:backgroundTint="@color/white" />
+        android:textColorHint="@color/white"
+        android:textStyle="bold" />
 
-    <Button
+    <EditText
+        android:layout_marginTop="12dp"
+        android:paddingStart="12dp"
+        android:background="@drawable/edit_text_style"
         android:id="@+id/button_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="4dp"
-        android:text="Password"
-        android:textAllCaps="false"
-        android:backgroundTint="@color/green_light"
-        android:layout_marginBottom="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="28dp"
+        android:hint="Password"
         android:textColor="@color/white"
+        android:inputType="numberPassword"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/button_username"
-        app:layout_constraintTop_toBottomOf="@id/button_email" />
+        android:textColorHint="@color/white" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/white"
+        android:drawableEnd="@drawable/circle_right"
+        android:text="NEXT"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="40dp" />
+
+
     <ImageView
+        android:layout_gravity="center"
         android:id="@+id/image"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginStart="104dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/LFP"
-        tools:layout_editor_absoluteY="417dp" />
+        android:src="@drawable/apl1" />
 
     <TextView
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Premier League"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/image"
-        app:layout_constraintStart_toStartOf="@id/image"
-        app:layout_constraintEnd_toEndOf="@id/image"
-        android:layout_margin="20dp"
         android:textSize="32sp"
-        android:text="LFP"/>
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
